@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Policy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input placeholder="Enter Policy name" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Add a cover" [(ngModel)]="cover"></ion-input>
+    <ion-button (click)="addCover()" item-right>
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-list *ngFor="let cover of coverages">
+    <ion-label>{{cover}}</ion-label>
+  </ion-list>
+  <ion-row align-items-center justify-content-center>
+    <ion-col>
+      <ion-button (click)="addPolicy()" routerLink="/home" routerDirection="forward">Add Policy</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
