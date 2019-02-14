@@ -1,6 +1,8 @@
 {
   "name": "ionic-hello-world",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "ffad8635"
 }
